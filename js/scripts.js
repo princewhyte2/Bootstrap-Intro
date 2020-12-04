@@ -1,12 +1,12 @@
 $(function() {
-    $("#reserveTable").click(
+    $("#reserveTable").on("click",
         function() {
             $("#reserveTable").attr("data-toggle", "modal");
             $("#reserveTable").attr("data-target", "#reservationModal");
 
         }
     );
-    $("#login").click(
+    $("#login").on("click",
         function() {
             $("#login").attr("data-toggle", "modal");
             $("#login").attr("data-target", "#loginModal");
@@ -17,7 +17,7 @@ $(function() {
     $("#mycarousel").carousel({
         interval: 2000
     });
-    $("#carouselButton").click(function() {
+    $("#carouselButton").on("click", function() {
         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
             $("#carouselButton").children("span").removeClass('fa-pause');
